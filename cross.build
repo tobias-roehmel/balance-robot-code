@@ -1,0 +1,35 @@
+[binaries]
+c       = 'arm-none-eabi-gcc'
+cpp     = 'arm-none-eabi-g++'
+ld      = 'arm-none-eabi-gcc'
+ar      = 'arm-none-eabi-ar'
+as      = 'arm-none-eabi-gcc'
+size    = 'arm-none-eabi-size'
+objdump = 'arm-none-eabi-objdump'
+objcopy = 'arm-none-eabi-objcopy'
+strip   = 'arm-none-eabi-strip'
+gdb     = 'gdb-multiarch'
+terminal= 'bash'
+
+exe_wrapper = 'meson_exe_wrapper.sh'
+
+[properties]
+c_args = [
+               '-mthumb',
+               '-mcpu=cortex-m4',
+               '-mfloat-abi=hard',
+               '-mfpu=fpv4-sp-d16',
+          ]
+
+c_link_args = [
+                '-mthumb',
+                '-mcpu=cortex-m4',
+                '-mfloat-abi=hard',
+                '-mfpu=fpv4-sp-d16',
+             ]
+
+[host_machine]
+system     = 'none'
+cpu_family = 'arm'
+cpu        = 'cortex-m4'
+endian     = 'little'
