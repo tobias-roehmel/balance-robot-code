@@ -1,11 +1,16 @@
-# Balance Robot Code
-Uses libopencm3 (https://github.com/libopencm3)
+# How to build
+Dependencies:
+- meson
+- git
+- st-flash (https://github.com/stlink-org/stlink)
+- arm compiler/tools (arm-none-eabi- tools)
+
 Build with meson:
 ~~~
 meson --cross-file=cross.build build
 meson compile -C build bin
 ~~~
-Flash with st-flash (https://github.com/stlink-org/stlink):
+Flash with st-flash:
 ~~~
 meson compile -C build flash
 ~~~
@@ -23,3 +28,6 @@ meson compile -C build flash
     - Enable B2
     - Direction A7
     - Halft step activate B1
+
+# Library
+Uses libopencm3 (https://github.com/libopencm3)
