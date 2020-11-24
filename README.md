@@ -1,6 +1,14 @@
 # Balance Robot Code
-
 Uses libopencm3 (https://github.com/libopencm3)
+Build with meson:
+~~~
+meson --cross-file=cross.build build
+meson compile -C build bin
+~~~
+Flash with st-flash (https://github.com/stlink-org/stlink):
+~~~
+meson compile -C build flash
+~~~
 
 # Pin connections
 - UART Tx A9
